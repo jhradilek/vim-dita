@@ -1,0 +1,11 @@
+= vim-dita
+
+== Description
+
+The *vim-dita* plug-in adds support for Darwin Information Typing Architecture (DITA) version 1.3 to Vim. It provides file type detection for DITA files, as well as syntax files and omni completion for DITA maps and topics according to the official link:http://docs.oasis-open.org/dita/dita/v1.3/dita-v1.3-part3-all-inclusive.html[specification].
+
+== Copyright
+
+Copyright © 2024 Jaromir Hradilek
+
+This program is free software; see the source for copying conditions. It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
