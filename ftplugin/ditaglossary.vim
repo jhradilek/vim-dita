@@ -1,9 +1,9 @@
 " Vim filetype plugin file
-" Language:    DITA topic
+" Language:    DITA glossary
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
 " Last Change: 17 August 2024
-" Description: A filetype plugin file for DITA version 1.3 topics
+" Description: A filetype plugin file for DITA version 1.3 glossaries
 
 " Run this plugin ony once for the current buffer:
 if exists('b:did_ftplugin')
@@ -18,7 +18,7 @@ set cpo&vim
 " available:
 if exists('&omnifunc') && exists(':XMLns')
   " Enable omni completion for DITA version 1.3:
-  XMLns ditatopic
+  XMLns ditaglossary
 endif
 
 " Restore compatibility options:
