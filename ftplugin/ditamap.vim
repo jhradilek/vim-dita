@@ -17,7 +17,7 @@ set cpo&vim
 " Verify that omni completion is supported and the :XMLns command is
 " available:
 if exists('&omnifunc') && exists(':XMLns')
-  " Enable omni completion for DITA version 1.3 maps:
+  " Enable omni completion for DITA version 1.3:
   XMLns ditamap
 endif
 

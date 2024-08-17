@@ -1,9 +1,9 @@
 " Vim filetype plugin file
-" Language:    DITA map
+" Language:    DITA reference
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
 " Last Change: 17 August 2024
-" Description: A filetype plugin file for DITA version 1.3 bookmaps
+" Description: A filetype plugin file for DITA version 1.3 references
 
 " Run this plugin ony once for the current buffer:
 if exists('b:did_ftplugin')
@@ -18,7 +18,7 @@ set cpo&vim
 " available:
 if exists('&omnifunc') && exists(':XMLns')
   " Enable omni completion for DITA version 1.3:
-  XMLns ditabookmap
+  XMLns ditareference
 endif
 
 " Restore compatibility options:
