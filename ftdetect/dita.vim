@@ -12,4 +12,6 @@ au BufNewFile,BufRead *.dita
   \   set filetype=ditaconcept syntax=ditaconcept iskeyword+=- |
   \ elseif getline(1).getline(2).getline(3) =~? '"reference.dtd"' |
   \   set filetype=ditareference syntax=ditareference iskeyword+=- |
+  \ else |
+  \   set filetype=ditatopic syntax=ditatopic iskeyword+=- |
   \ endif
