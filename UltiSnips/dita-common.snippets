@@ -2,7 +2,7 @@
 # Language:    DITA
 # Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 # URL:         https://github.com/jhradilek/vim-dita
-# Last Change: 20 August 2024
+# Last Change: 21 August 2024
 # Description: A snippets file for DITA version 1.3 common elements
 
 # Load any generic XML snippets if available:
@@ -14,4 +14,56 @@ extends xml
 
 snippet xml "XML declaration" !b
 <?xml version='${1:1.0}' encoding='${2:utf-8}' ?>$0
+endsnippet
+
+# -------------------------------------------------------------------------
+#               Convenient Aliases for Common DITA Elements
+# -------------------------------------------------------------------------
+
+snippet attention "DITA attention note" !w
+<note type="attention">${VISUAL}$1</note>$0
+endsnippet
+
+snippet caution "DITA caution note" !w
+<note type="caution">${VISUAL}$1</note>$0
+endsnippet
+
+snippet danger "DITA danger note" !w
+<note type="danger">${VISUAL}$1</note>$0
+endsnippet
+
+snippet fastpath "DITA fastpath note" !w
+<note type="fastpath">${VISUAL}$1</note>$0
+endsnippet
+
+snippet important "DITA important note" !w
+<note type="important">${VISUAL}$1</note>$0
+endsnippet
+
+snippet notice "DITA notice note" !w
+<note type="notice">${VISUAL}$1</note>$0
+endsnippet
+
+snippet other "DITA other note" !w
+<note type="other">${VISUAL}$1</note>$0
+endsnippet
+
+snippet remember "DITA remember note" !w
+<note type="remember">${VISUAL}$1</note>$0
+endsnippet
+
+snippet restriction "DITA restriction note" !w
+<note type="restriction">${VISUAL}$1</note>$0
+endsnippet
+
+snippet tip "DITA tip note" !w
+<note type="tip">${VISUAL}$1</note>$0
+endsnippet
+
+snippet trouble "DITA trouble note" !w
+<note type="trouble">${VISUAL}$1</note>$0
+endsnippet
+
+snippet warning "DITA warning note" !w
+<note type="warning">${VISUAL}$1</note>$0
 endsnippet
