@@ -1,0 +1,23 @@
+# Vim snippets file for UltiSnips
+# Language:    DITA DITAVAL
+# Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+# URL:         https://github.com/jhradilek/vim-dita
+# Last Change: 20 August 2024
+# Description: A snippets file for DITA version 1.3 DITAVAL files
+
+# NOTE: Do NOT load common DITA snippets.
+
+# -------------------------------------------------------------------------
+#                     Commonly Used DITAVAL Elements
+# -------------------------------------------------------------------------
+
+snippet val "DITAVAL val structure" !b
+<?xml version='1.0' encoding='utf-8' ?>
+<val>
+	${VISUAL}$0
+</val>
+endsnippet
+
+snippet xml "XML declaration" !b
+<?xml version='${1:1.0}' encoding='${2:utf-8}' ?>$0
+endsnippet

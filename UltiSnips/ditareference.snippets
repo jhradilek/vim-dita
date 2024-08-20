@@ -1,0 +1,30 @@
+# Vim snippets file for UltiSnips
+# Language:    DITA reference
+# Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+# URL:         https://github.com/jhradilek/vim-dita
+# Last Change: 21 August 2024
+# Description: A snippets file for DITA version 1.3 references
+
+# Load common DITA snippets:
+extends dita-common
+
+# -------------------------------------------------------------------------
+#                  Commonly Used DITA Reference Elements
+# -------------------------------------------------------------------------
+
+snippet doctype "DITA reference document type declaration" !b
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">$0
+endsnippet
+
+snippet reference "DITA reference structure" !b
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="${2:${1/([\w\d:._-])|( )|(<[^>]*>|.)/(?1:\l$0)(?2:-)(?3:)/g}}">
+	<title>$1</title>
+	<shortdesc>$3</shortdesc>
+	<refbody>
+		${VISUAL}$0
+	</refbody>
+</reference>
+endsnippet
+

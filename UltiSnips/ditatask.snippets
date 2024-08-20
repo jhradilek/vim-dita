@@ -1,0 +1,29 @@
+# Vim snippets file for UltiSnips
+# Language:    DITA task
+# Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+# URL:         https://github.com/jhradilek/vim-dita
+# Last Change: 21 August 2024
+# Description: A snippets file for DITA version 1.3 tasks
+
+# Load common DITA snippets:
+extends dita-common
+
+# -------------------------------------------------------------------------
+#                    Commonly Used DITA Task Elements
+# -------------------------------------------------------------------------
+
+snippet doctype "DITA task document type declaration" !b
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">$0
+endsnippet
+
+snippet task "DITA task structure" !b
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="${2:${1/([\w\d:._-])|( )|(<[^>]*>|.)/(?1:\l$0)(?2:-)(?3:)/g}}">
+	<title>$1</title>
+	<shortdesc>$3</shortdesc>
+	<taskbody>
+		${VISUAL}$0
+	</taskbody>
+</task>
+endsnippet

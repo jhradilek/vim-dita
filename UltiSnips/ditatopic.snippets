@@ -1,0 +1,29 @@
+# Vim snippets file for UltiSnips
+# Language:    DITA topic
+# Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+# URL:         https://github.com/jhradilek/vim-dita
+# Last Change: 20 August 2024
+# Description: A snippets file for DITA version 1.3 topics
+
+# Load common DITA snippets:
+extends dita-common
+
+# -------------------------------------------------------------------------
+#                    Commonly Used DITA Topic Elements
+# -------------------------------------------------------------------------
+
+snippet doctype "DITA topic document type declaration" !b
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">$0
+endsnippet
+
+snippet topic "DITA topic structure" !b
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="${2:${1/([\w\d:._-])|( )|(<[^>]*>|.)/(?1:\l$0)(?2:-)(?3:)/g}}">
+	<title>$1</title>
+	<shortdesc>$3</shortdesc>
+	<body>
+		${VISUAL}$0
+	</body>
+</topic>
+endsnippet

@@ -1,0 +1,26 @@
+# Vim snippets file for UltiSnips
+# Language:    DITA glossary
+# Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+# URL:         https://github.com/jhradilek/vim-dita
+# Last Change: 20 August 2024
+# Description: A snippets file for DITA version 1.3 glossaries
+
+# Load common DITA snippets:
+extends dita-common
+
+# -------------------------------------------------------------------------
+#                  Commonly Used DITA Glossary Elements
+# -------------------------------------------------------------------------
+
+snippet doctype "DITA glossary entry document type declaration" !b
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">$0
+endsnippet
+
+snippet glossentry "DITA glossary entry structure" !b
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="${2:${1/([\w\d:._-])|( )|(<[^>]*>|.)/(?1:\l$0)(?2:-)(?3:)/g}}">
+	<glossterm>$1</glossterm>
+	<glossdef>${VISUAL}$3</glossdef>$0
+</glossentry>
+endsnippet
