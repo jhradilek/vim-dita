@@ -45,6 +45,10 @@ The following are currently supported DITA document types and their correspondin
 |Glossary
 |`.dita`
 |`ditaglossary`
+
+|DITAVAL
+|`.ditaval`
+|`ditaval`
 |===
 
 File type settings marked with the dagger symbol *†* are used by default for the selected file extension if the `DOCTYPE` directive can not be found on the first three lines of the file. To switch to a different file type manually, use the following Vim command:

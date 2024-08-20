@@ -17,3 +17,5 @@ au BufNewFile,BufRead *.dita
   \ else |
   \   set filetype=ditatopic syntax=ditatopic iskeyword+=- |
   \ endif
+
+au BufNewFile,BufRead *.ditaval set filetype=ditaval syntax=ditaval iskeyword+=-
