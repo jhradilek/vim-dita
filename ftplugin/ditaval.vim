@@ -14,6 +14,9 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+" Load the filetype plugin for the XML language:
+runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
+
 " Verify that omni completion is supported and the :XMLns command is
 " available:
 if exists('&omnifunc') && exists(':XMLns')

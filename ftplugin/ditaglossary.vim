@@ -2,7 +2,7 @@
 " Language:    DITA glossary
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
-" Last Change: 17 August 2024
+" Last Change: 20 August 2024
 " Description: A filetype plugin file for DITA version 1.3 glossaries
 
 " Run this plugin ony once for the current buffer:
@@ -13,6 +13,9 @@ endif
 " Save compatibility options to avoid problems in compatible mode:
 let s:save_cpo = &cpo
 set cpo&vim
+
+" Load the filetype plugin for the XML language:
+runtime! ftplugin/xml.vim ftplugin/xml_*.vim ftplugin/xml/*.vim
 
 " Verify that omni completion is supported and the :XMLns command is
 " available:
