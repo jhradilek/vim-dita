@@ -2,13 +2,16 @@
 " Language:    DITA task
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
-" Last Change: 17 August 2024
+" Last Change: 29 August 2024
 " Description: A syntax file for DITA version 1.3 tasks
 
 " Load this syntax file only once for the current buffer:
 if exists("b:current_syntax")
   finish
 endif
+
+" Allow hyphenated elements to be recognized as keywords:
+setlocal iskeyword+=-
 
 do Syntax xml
 syn cluster xmlTagHook add=ditaTagName
