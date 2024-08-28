@@ -78,6 +78,15 @@ Note that the plug-in only checks whether the element is a valid child of its pa
 
 By default, the key combination for omni completion is set to `Ctrl+x Ctrl+o`. To cycle through the list of available options forwards, press `Ctrl+n`, to cycle through the list backwords, press `Ctrl+p`.
 
+[#snippets]
+=== Snippets
+
+The plug-in provides a collection of snippets for each xref:doctypes[document type] separately to make the content creation faster.
+
+image::resources/vim-dita-snippets.gif[Demonstration of snippets]
+
+Note that the snippets are currently under development and are not complete yet. The snippets require the link:https://github.com/SirVer/ultisnips[UltiSnips] plug-in to be installed.
+
 [#copyright]
 == Copyright
 

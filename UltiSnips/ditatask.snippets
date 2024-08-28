@@ -27,3 +27,17 @@ snippet task "DITA task structure" !b
 	</taskbody>
 </task>
 endsnippet
+
+snippet steps "DITA steps element" !b
+<steps>
+	<step>
+		<cmd>${VISUAL}$1</cmd>
+	</step>$2
+</steps>$0
+endsnippet
+
+snippet step "DITA step element" !b
+<step>
+	<cmd>${VISUAL}$1</cmd>
+</step>$0
+endsnippet
