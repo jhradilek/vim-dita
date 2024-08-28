@@ -1,3 +1,10 @@
+" Vim filetype detection file
+" Language:    DITA
+" Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
+" URL:         https://github.com/jhradilek/vim-dita
+" Last Change: 29 August 2024
+" Description: A filetype detection file for DITA version 1.3
+
 au BufNewFile,BufRead *.ditamap
   \ if getline(1).getline(2).getline(3) =~? '"bookmap.dtd"' |
   \   set filetype=ditabookmap syntax=ditabookmap |
@@ -15,6 +22,19 @@ au BufNewFile,BufRead *.dita
   \ elseif getline(1).getline(2).getline(3) =~? '"glossary.dtd"' |
   \   set filetype=ditaglossary syntax=ditaglossary |
   \ else |
+  \   set filetype=ditatopic syntax=ditatopic |
+  \ endif
+
+au BufNewFile,BufRead *.xml
+  \ if getline(1).getline(2).getline(3) =~? '"task.dtd"' |
+  \   set filetype=ditatask syntax=ditatask |
+  \ elseif getline(1).getline(2).getline(3) =~? '"concept.dtd"' |
+  \   set filetype=ditaconcept syntax=ditaconcept |
+  \ elseif getline(1).getline(2).getline(3) =~? '"reference.dtd"' |
+  \   set filetype=ditareference syntax=ditareference |
+  \ elseif getline(1).getline(2).getline(3) =~? '"glossary.dtd"' |
+  \   set filetype=ditaglossary syntax=ditaglossary |
+  \ elseif getline(1).getline(2).getline(3) =~? '"topic.dtd"' |
   \   set filetype=ditatopic syntax=ditatopic |
   \ endif
 
