@@ -28,7 +28,7 @@ The following are currently supported DITA document types and their correspondin
 
 |Topic
 |`.dita`
-|`ditatopic` †
+|`ditatopic`
 
 |Concept
 |`.dita`
