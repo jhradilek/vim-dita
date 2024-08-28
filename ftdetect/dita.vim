@@ -12,20 +12,7 @@ au BufNewFile,BufRead *.ditamap
   \   set filetype=ditamap syntax=ditamap |
   \ endif
 
-au BufNewFile,BufRead *.dita
-  \ if getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<task\>' |
-  \   set filetype=ditatask syntax=ditatask |
-  \ elseif getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<concept\>' |
-  \   set filetype=ditaconcept syntax=ditaconcept |
-  \ elseif getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<reference\>' |
-  \   set filetype=ditareference syntax=ditareference |
-  \ elseif getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<glossentry\>' |
-  \   set filetype=ditaglossary syntax=ditaglossary |
-  \ else |
-  \   set filetype=ditatopic syntax=ditatopic |
-  \ endif
-
-au BufNewFile,BufRead *.xml
+au BufNewFile,BufRead *.dita,*.xml
   \ if getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<task\>' |
   \   set filetype=ditatask syntax=ditatask |
   \ elseif getline(1).getline(2).getline(3) =~? '<!DOCTYPE\s*\<concept\>' |
