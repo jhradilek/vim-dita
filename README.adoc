@@ -87,6 +87,15 @@ image::resources/vim-dita-snippets.gif[Demonstration of snippets]
 
 Note that the snippets are currently under development and are not complete yet. The snippets require the link:https://github.com/SirVer/ultisnips[UltiSnips] plug-in to be installed.
 
+[#compiler]
+=== Compiler settings
+
+The plug-in provides a custom compiler configuration for link:https://www.dita-ot.org/[DITA Open Toolkit] to make building previews of the content and resolving validation errors faster.
+
+image::resources/vim-dita-compiler.gif[Demonstration of complier support]
+
+Note that DITA Open Toolkit needs to be installed and the `dita` command needs to be executable for this feature to work.
+
 [#copyright]
 == Copyright
 
