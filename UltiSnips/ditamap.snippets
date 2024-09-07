@@ -2,7 +2,7 @@
 # Language:    DITA map
 # Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 # URL:         https://github.com/jhradilek/vim-dita
-# Last Change: 20 August 2024
+# Last Change: 8 September 2024
 # Description: A snippets file for DITA version 1.3 maps
 
 # Load common DITA snippets:
@@ -23,4 +23,27 @@ snippet map "DITA map structure" !b
 	<title>$1</title>
 	${VISUAL}$0
 </map>
+endsnippet
+
+snippet mapref "DITA mapref element" !b
+<mapref href="${VISUAL}$1" />$0
+endsnippet
+
+snippet topichead "DITA topichead element" !b
+<topichead>
+	<topicmeta>
+		<navtitle>$1</navtitle>
+		${VISUAL}$2
+	</topicmeta>
+</topichead>$0
+endsnippet
+
+snippet topicmeta "DITA topicmeta element" !b
+<topicmeta>
+	${VISUAL}$1
+</topicmeta>$0
+endsnippet
+
+snippet topicref "DITA topicref element" !b
+<topicref href="${VISUAL}$1" type="${2:task}" />$0
 endsnippet
