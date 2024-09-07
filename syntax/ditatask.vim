@@ -2,7 +2,7 @@
 " Language:    DITA task
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
-" Last Change: 29 August 2024
+" Last Change: 8 September 2024
 " Description: A syntax file for DITA version 1.3 tasks
 
 " Load this syntax file only once for the current buffer:

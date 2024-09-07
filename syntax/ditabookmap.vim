@@ -2,7 +2,7 @@
 " Language:    DITA map
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
-" Last Change: 29 August 2024
+" Last Change: 8 September 2024
 " Description: A syntax file for DITA version 1.3 bookmaps
 
 " Load this syntax file only once for the current buffer:
@@ -96,6 +96,9 @@ syn keyword ditaTagName xmlelement xmlnsname xmlpi xref year contained
 
 syn region ditaComment  start="<draft-comment\>" end="</draft-comment>"me=e-16 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEntity,@Spell keepend
 syn region ditaTitle    start="<title\>" end="</title>"me=e-8 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEntity,@Spell keepend
+syn region ditaTitle    start="<mainbooktitle\>" end="</mainbooktitle>"me=e-16 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEntity,@Spell keepend
+syn region ditaTitle    start="<navtitle\>" end="</navtitle>"me=e-11 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEntity,@Spell keepend
+syn region ditaTitle    start="<searchtitle\>" end="</searchtitle>"me=e-14 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEntity,@Spell keepend
 syn region ditaEmphasis start="<i\>" end="</i>"me=e-4 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEndTag,@Spell keepend
 syn region ditaStrong   start="<b\>" end="</b>"me=e-4 contains=xmlTag,xmlNamespace,xmlTagName,xmlEndTag,xmlRegion,xmlEndTag,@Spell keepend
 
