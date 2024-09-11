@@ -2,7 +2,7 @@
 " Language:    DITA
 " Maintainer:  Jaromir Hradilek <jhradilek@gmail.com>
 " URL:         https://github.com/jhradilek/vim-dita
-" Last Change: 6 September 2024
+" Last Change: 11 September 2024
 " Description: A compiler definition file for DITA version 1.3
 
 " Do not override run-time compiler settings:
@@ -23,13 +23,14 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Use DITA Open Toolkit to build the file and produce errors:
-CompilerSet makeprg=dita\ --args.gen.task.lbl=yes\ -f\ xhtml\ -i\ %
+CompilerSet makeprg=dita\ --no-color\ --args.gen.task.lbl=yes\ -f\ xhtml\ -i\ %
 
 " Parse error messages:
 CompilerSet errorformat=
   \%trror:\ file:%f:%l:%c:\ %m,
   \%trror:\ \%.%#:\ file:%f:%l:%c:\ %m,
-  \%trror:\ %m
+  \%tarning:\ file:%f:%l:%c:\ %m,
+  \%tarning:\ \%.%#:\ file:%f:%l:%c:\ %m
 
 " Restore the compatibility options:
 let &cpo = s:save_cpo
